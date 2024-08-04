@@ -1,0 +1,9 @@
+<app-loading-bar *ngIf="loading"></app-loading-bar>
+
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="user">
+  <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <img [src]="user.avatar" alt="User Avatar">
+  <p>Email: {{ user.email }}</p>
+  <button (click)="goBack()">Back</button>
+</div>

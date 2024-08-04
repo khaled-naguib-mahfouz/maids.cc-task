@@ -1,0 +1,5 @@
+<a [routerLink]="['/user', user.id]" class="user-card">
+  <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}">
+  <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+  <p>{{ user.email }}</p>
+</a>

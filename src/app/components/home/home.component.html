@@ -1,0 +1,13 @@
+<app-loading-bar *ngIf="loading"></app-loading-bar>
+
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="users.length > 0">
+  <div class="user-list">
+    <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+  </div>
+  <app-pagination
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (pageChanged)="onPageChange($event)">
+  </app-pagination>
+</div>
